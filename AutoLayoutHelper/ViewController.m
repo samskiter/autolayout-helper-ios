@@ -22,6 +22,7 @@
     [self createViewWithAddTopLeftRightBottomConstraints];
     [self createViewWithAddWidthHeightConstraints];
     [self createViewWithCenterXCenterYConstraints];
+    [self createBottomRightViewWithAspectRatio];
 }
 
 - (void)createViewWithAddTopLeftRightBottomConstraints
@@ -62,6 +63,23 @@
     
     [view addWidthConstraintWithRelation:NSLayoutRelationEqual constant:100.0];
     [view addHeightConstraintWithRelation:NSLayoutRelationEqual constant:80.0];
+}
+
+- (void)createBottomRightViewWithAspectRatio
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.text = @"A view with width = 2 x height";
+    label.numberOfLines = 0;
+    
+    label.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:label];
+    
+    label.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [label addRightConstraintToView:label.superview relation:NSLayoutRelationEqual constant:0.0];
+    [label addBottomConstraintToView:label.superview relation:NSLayoutRelationEqual constant:0.0];
+    [label addAspectRatioConstraintWithHeightProportion:10 widthProportion:20];
+    [label addWidthConstraintWithRelation:NSLayoutRelationEqual constant:200.0];
 }
 
 @end

@@ -292,4 +292,18 @@
  */
 - (NSLayoutConstraint *)addHeightConstraintToView:(UIView *)toView relation:(NSLayoutRelation)relation constant:(CGFloat)constant;
 
+#pragma mark - AspectRatio
+
+/**
+ *  Creates and adds an NSLayoutConstraint that relates this view's height to its width.
+ *  Such that the width is related to the height by the two ratio arguments.
+ *
+ *  @param height The proportional height
+ *  @param width The proportional width
+ *
+ *  @return The created NSLayoutConstraint for this aspect ratio attribute relation
+ */
+- (NSLayoutConstraint *)addAspectRatioConstraintWithHeightProportion:(CGFloat)height widthProportion:(CGFloat)width;
+
+
 @end

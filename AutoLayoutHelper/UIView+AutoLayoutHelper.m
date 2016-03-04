@@ -222,6 +222,21 @@
 }
 
 
+#pragma mark - Aspect ratio
+
+- (NSLayoutConstraint *)addAspectRatioConstraintWithHeightProportion:(CGFloat)height widthProportion:(CGFloat)width
+{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self
+                                                                  attribute:NSLayoutAttributeHeight
+                                                                 multiplier:width/height
+                                                                   constant:0];
+    [self addConstraint:constraint];
+    return constraint;
+}
+
 #pragma mark - Private
 
 - (NSLayoutConstraint *)createConstraintWithAttribute:(NSLayoutAttribute)attribute toView:(UIView *)toView toAttribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant
