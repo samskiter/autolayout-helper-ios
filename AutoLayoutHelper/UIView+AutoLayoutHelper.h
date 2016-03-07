@@ -50,6 +50,19 @@
 #pragma mark - Left
 
 /**
+ *  Creates and adds an NSLayoutConstraint that relates this view's left to the left of its superview.
+ *
+ *  Note. The new constraint is added to this view's superview for you.
+ *
+ *  @param toView   The other view to relate this view to
+ *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
+ *  @param constant An amount by which to offset this view's left from the other view's left edge
+ *
+ *  @return The created NSLayoutConstraint for this left attribute relation
+ */
+- (NSLayoutConstraint *)addLeftConstraintToSuperViewWithRelation:(NSLayoutRelation)relation constant:(CGFloat)constant;
+
+/**
  *  Creates and adds an NSLayoutConstraint that relates this view's left to the left of another view.
  *
  *  Note. The new constraint is added to this view's superview for you.
@@ -78,6 +91,19 @@
 
 
 #pragma mark - Right
+
+/**
+ *  Creates and adds an NSLayoutConstraint that relates this view's right to the right of its superview.
+ *
+ *  Note. The new constraint is added to this view's superview for you.
+ *
+ *  @param toView   The other view to relate this view to
+ *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
+ *  @param constant An amount by which to offset this view's right from the other view's right edge
+ *
+ *  @return The created NSLayoutConstraint for this right attribute relation
+ */
+- (NSLayoutConstraint *)addRightConstraintToSuperViewWithRelation:(NSLayoutRelation)relation constant:(CGFloat)constant;
 
 /**
  *  Creates and adds an NSLayoutConstraint that relates this view's right to the right of another view.
@@ -110,6 +136,19 @@
 #pragma mark - Top
 
 /**
+ *  Creates and adds an NSLayoutConstraint that relates this view's top to the top of its superview.
+ *
+ *  Note. The new constraint is added to this view's superview for you.
+ *
+ *  @param toView   The other view to relate this view to
+ *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
+ *  @param constant An amount by which to offset this view's top from the other view's top edge
+ *
+ *  @return The created NSLayoutConstraint for this top attribute relation
+ */
+- (NSLayoutConstraint *)addTopConstraintToSuperViewWithRelation:(NSLayoutRelation)relation constant:(CGFloat)constant;
+
+/**
  *  Creates and adds an NSLayoutConstraint that relates this view's top to the top of another view.
  *
  * Note. The new constraint is added to this view's superview for you.
@@ -138,6 +177,19 @@
 
 
 #pragma mark - Bottom
+
+/**
+ *  Creates and adds an NSLayoutConstraint that relates this view's bottom to the bottom of its superview.
+ *
+ *  Note. The new constraint is added to this view's superview for you.
+ *
+ *  @param toView   The other view to relate this view to
+ *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
+ *  @param constant An amount by which to offset this view's bottom from the other view's bottom edge
+ *
+ *  @return The created NSLayoutConstraint for this bottom attribute relation
+ */
+- (NSLayoutConstraint *)addBottomConstraintToSuperViewWithRelation:(NSLayoutRelation)relation constant:(CGFloat)constant;
 
 /**
  *  Creates and adds an NSLayoutConstraint that relates this view's bottom to the bottom edge of another view

@@ -54,6 +54,12 @@
 
 #pragma mark - Left
 
+- (NSLayoutConstraint *)addLeftConstraintToSuperViewWithRelation:(NSLayoutRelation)relation constant:(CGFloat)constant
+{
+    if (self.superview == nil) return nil;
+    return [self addLeftConstraintToView:self.superview relation:relation constant:constant];
+}
+
 - (NSLayoutConstraint *)addLeftConstraintToView:(UIView *)toView relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
     return [self addLeftConstraintToView:toView attribute:NSLayoutAttributeLeft relation:relation constant:constant];
@@ -73,6 +79,12 @@
 
 
 #pragma mark - Right
+
+- (NSLayoutConstraint *)addRightConstraintToSuperViewWithRelation:(NSLayoutRelation)relation constant:(CGFloat)constant
+{
+    if (self.superview == nil) return nil;
+    return [self addRightConstraintToView:self.superview relation:relation constant:constant];
+}
 
 - (NSLayoutConstraint *)addRightConstraintToView:(UIView *)toView relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
@@ -94,6 +106,12 @@
 
 #pragma mark - Top
 
+- (NSLayoutConstraint *)addTopConstraintToSuperViewWithRelation:(NSLayoutRelation)relation constant:(CGFloat)constant
+{
+    if (self.superview == nil) return nil;
+    return [self addTopConstraintToView:self.superview relation:relation constant:constant];
+}
+
 - (NSLayoutConstraint *)addTopConstraintToView:(UIView *)toView relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
     return [self addTopConstraintToView:toView attribute:NSLayoutAttributeTop relation:relation constant:constant];
@@ -113,6 +131,12 @@
 
 
 #pragma mark - Bottom
+
+- (NSLayoutConstraint *)addBottomConstraintToSuperViewWithRelation:(NSLayoutRelation)relation constant:(CGFloat)constant
+{
+    if (self.superview == nil) return nil;
+    return [self addBottomConstraintToView:self.superview relation:relation constant:constant];
+}
 
 - (NSLayoutConstraint *)addBottomConstraintToView:(UIView *)toView relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
