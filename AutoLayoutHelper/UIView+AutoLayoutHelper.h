@@ -56,7 +56,7 @@
  *
  *  @param toView   The other view to relate this view to
  *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
- *  @param constant An amount by which to offset this view's left from the other view's specified edge
+ *  @param constant An amount by which to offset this view's left from the other view's left edge
  *
  *  @return The created NSLayoutConstraint for this left attribute relation
  */
@@ -86,7 +86,7 @@
  *
  *  @param toView   The other view to relate this view to
  *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
- *  @param constant An amount by which to offset this view's right from the other view's specified edge
+ *  @param constant An amount by which to offset this view's right from the other view's right edge
  *
  *  @return The created NSLayoutConstraint for this right attribute relation
  */
@@ -116,7 +116,7 @@
  
  *  @param toView   The other view to relate this view to
  *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
- *  @param constant An amount by which to offset this view's top from the other view's specified edge
+ *  @param constant An amount by which to offset this view's top from the other view's top edge
  *
  *  @return The created NSLayoutConstraint for this top attribute relation
  */
@@ -146,7 +146,7 @@
  *
  *  @param toView   The other view to relate this view to
  *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
- *  @param constant An amount by which to offset this view's bottom from the other view's specified edge
+ *  @param constant An amount by which to offset this view's bottom from the other view's bottom edge
  *
  *  @return The created NSLayoutConstraint for this bottom attribute relation
  */
