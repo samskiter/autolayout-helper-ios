@@ -67,11 +67,17 @@
 
 - (NSLayoutConstraint *)addLeftConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
+    return [self addLeftConstraintToView:toView attribute:toAttribute relation:relation constant:constant priority:UILayoutPriorityRequired];
+}
+
+- (NSLayoutConstraint *)addLeftConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant priority:(UILayoutPriority)priority
+{
     NSLayoutConstraint *constraint = [self createConstraintWithAttribute:NSLayoutAttributeLeft
                                                                   toView:toView
                                                              toAttribute:toAttribute
                                                                 relation:relation
                                                                 constant:constant];
+    constraint.priority = priority;
     [self.superview addConstraint:constraint];
     
     return constraint;
@@ -93,11 +99,17 @@
 
 - (NSLayoutConstraint *)addRightConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
+    return [self addRightConstraintToView:toView attribute:toAttribute relation:relation constant:constant priority:UILayoutPriorityRequired];
+}
+
+- (NSLayoutConstraint *)addRightConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant priority:(UILayoutPriority)priority
+{
     NSLayoutConstraint *constraint = [self createConstraintWithAttribute:NSLayoutAttributeRight
                                                                   toView:toView
                                                              toAttribute:toAttribute
                                                                 relation:relation
                                                                 constant:constant];
+    constraint.priority = priority;
     [self.superview addConstraint:constraint];
     
     return constraint;
@@ -119,11 +131,17 @@
 
 - (NSLayoutConstraint *)addTopConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
+    return [self addTopConstraintToView:toView attribute:toAttribute relation:relation constant:constant priority:UILayoutPriorityRequired];
+}
+
+- (NSLayoutConstraint *)addTopConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant priority:(UILayoutPriority)priority
+{
     NSLayoutConstraint *constraint = [self createConstraintWithAttribute:NSLayoutAttributeTop
                                                                   toView:toView
                                                              toAttribute:toAttribute
                                                                 relation:relation
                                                                 constant:constant];
+    constraint.priority = priority;
     [self.superview addConstraint:constraint];
     
     return constraint;
@@ -145,11 +163,17 @@
 
 - (NSLayoutConstraint *)addBottomConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant
 {
+    return [self addBottomConstraintToView:toView attribute:toAttribute relation:relation constant:constant priority:UILayoutPriorityRequired];
+}
+
+- (NSLayoutConstraint *)addBottomConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant priority:(UILayoutPriority)priority
+{
     NSLayoutConstraint *constraint = [self createConstraintWithAttribute:NSLayoutAttributeBottom
                                                                   toView:toView
                                                              toAttribute:toAttribute
                                                                 relation:relation
                                                                 constant:constant];
+    constraint.priority = priority;
     [self.superview addConstraint:constraint];
     
     return constraint;

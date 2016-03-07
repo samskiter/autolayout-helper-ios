@@ -88,6 +88,21 @@
  */
 - (NSLayoutConstraint *)addLeftConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant;
 
+/**
+ *  Creates and adds an NSLayoutConstraint that relates this view's left to some specified edge of another view.
+ *
+ *  Note. The new constraint is added to this view's superview for you.
+ *
+ *  @param toView      The other view to relate this view to
+ *  @param toAttribute The other view's layout attribute to relate this view's left to
+ *  @param relation    The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
+ *  @param constant    An amount by which to offset this view's left from the other view's specified edge
+ *  @param priority    The priority of the added constraint
+ *
+ *  @return The created NSLayoutConstraint for this Left attribute relation
+ */
+- (NSLayoutConstraint *)addLeftConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant priority:(UILayoutPriority)priority;
+
 
 #pragma mark - Right
 
@@ -129,6 +144,21 @@
  *  @return The created NSLayoutConstraint for this right attribute relation
  */
 - (NSLayoutConstraint *)addRightConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant;
+
+/**
+ *  Creates and adds an NSLayoutConstraint that relates this view's right to some specified edge of another view, given a relation and offset
+ *
+ * Note. The new constraint is added to this view's superview for you.
+ *
+ *  @param toView      The other view to relate this view to
+ *  @param toAttribute The other view's layout attribute to relate this view's right to
+ *  @param relation    The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
+ *  @param constant    An amount by which to offset this view's right from the other view's specified edge
+ *  @param priority    The priority of the added constraint
+ *
+ *  @return The created NSLayoutConstraint for this right attribute relation
+ */
+- (NSLayoutConstraint *)addRightConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant  priority:(UILayoutPriority)priority;;
 
 
 #pragma mark - Top
@@ -172,6 +202,21 @@
  */
 - (NSLayoutConstraint *)addTopConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant;
 
+/**
+ *  Creates and adds an NSLayoutConstraint that relates this view's top to some specified edge of another view, given a relation and offset
+ *
+ *  Note. The new constraint is added to this view's superview for you.
+ *
+ *  @param toView      The other view to relate this view to
+ *  @param toAttribute The other view's layout attribute to relate this view's top to
+ *  @param relation    The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
+ *  @param constant    An amount by which to offset this view's top from the other view's specified edge
+ *  @param priority    The priority of the added constraint
+ *
+ *  @return The created NSLayoutConstraint for this top attribute relation
+ */
+- (NSLayoutConstraint *)addTopConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant  priority:(UILayoutPriority)priority;;
+
 
 #pragma mark - Bottom
 
@@ -213,6 +258,21 @@
  *  @return The created NSLayoutConstraint for this bottom attribute relation
  */
 - (NSLayoutConstraint *)addBottomConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant;
+
+/**
+ *  Creates and adds an NSLayoutConstraint that relates this view's bottom to some specified edge of another view, given a relation and offset
+ *
+ *  Note. The new constraint is added to this view's superview for you.
+ *
+ *  @param toView      The other view to relate this view to
+ *  @param toAttribute The other view's layout attribute to relate this view's bottom to
+ *  @param relation    The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
+ *  @param constant    An amount by which to offset this view's bottom from the other view's specified edge
+ *  @param priority    The priority of the added constraint
+ *
+ *  @return The created NSLayoutConstraint for this bottom attribute relation
+ */
+- (NSLayoutConstraint *)addBottomConstraintToView:(UIView *)toView attribute:(NSLayoutAttribute)toAttribute relation:(NSLayoutRelation)relation constant:(CGFloat)constant  priority:(UILayoutPriority)priority;;
 
 
 #pragma mark - CenterX
