@@ -54,7 +54,6 @@
  *
  *  Note. The new constraint is added to this view's superview for you.
  *
- *  @param toView   The other view to relate this view to
  *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
  *  @param constant An amount by which to offset this view's left from the other view's left edge
  *
@@ -97,7 +96,6 @@
  *
  *  Note. The new constraint is added to this view's superview for you.
  *
- *  @param toView   The other view to relate this view to
  *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
  *  @param constant An amount by which to offset this view's right from the other view's right edge
  *
@@ -140,7 +138,6 @@
  *
  *  Note. The new constraint is added to this view's superview for you.
  *
- *  @param toView   The other view to relate this view to
  *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
  *  @param constant An amount by which to offset this view's top from the other view's top edge
  *
@@ -183,7 +180,6 @@
  *
  *  Note. The new constraint is added to this view's superview for you.
  *
- *  @param toView   The other view to relate this view to
  *  @param relation The relation of the constraint e.g. .Equal, .GreaterThanOrEqual, LessThanOrEqual
  *  @param constant An amount by which to offset this view's bottom from the other view's bottom edge
  *
